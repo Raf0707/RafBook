@@ -10,15 +10,15 @@
 package raf.console.chitalka.presentation.core.constants
 
 fun provideReleasesPage() =
-    "https://github.com/Raf0707/RafBookReader/releases/latest/download/chitalka.apk"
+    "https://github.com/Raf0707/RafBook/releases/latest/download/chitalka.apk"
 
 fun provideIssuesPage() =
-    "https://github.com/Raf0707/RafBookReader/issues"
+    "https://github.com/Raf0707/RafBook/issues"
 
 fun bugReportPage() = "https://t.me/rafbook_reader/2"
 
 fun provideContributorsPage() =
-    "https://github.com/Raf0707/RafBookReader/graphs/contributors"
+    "https://github.com/Raf0707/RafBook/graphs/contributors"
 
 fun provideTranslationPage() =
     "https://hosted.weblate.org/projects/book-story"
