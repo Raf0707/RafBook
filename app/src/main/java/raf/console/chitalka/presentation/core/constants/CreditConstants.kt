@@ -23,7 +23,6 @@ fun provideCredits() = listOf(
             UIText.StringValue("SAF"),
             UIText.StringResource(R.string.credits_fonts),
             UIText.StringResource(R.string.credits_icon),
-            UIText.StringResource(R.string.rustore_updates),
             UIText.StringResource(R.string.translate_tatar),
             UIText.StringResource(R.string.translate_bashkir),
             UIText.StringResource(R.string.translate_belarus)

@@ -90,10 +90,10 @@ fun AboutLayout(
         item {
             AboutItem(
                 title = stringResource(id = R.string.share_app),
-                description = "RafBook v${stringResource(id = R.string.app_version)}",
+                description = "RafBook v2.6.2",
             ) {
                 // Создаем текст для шаринга
-                val shareText = "Скачайте приложение RafBook по ссылке https://play.google.com/store/apps/details?id=raf.console.chitalka"
+                val shareText = "Скачайте приложение RafBook по ссылке https://www.rustore.ru/catalog/app/raf.console.chitalka"
 
                 // Копируем ссылку в буфер обмена
                 val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager

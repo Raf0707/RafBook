@@ -57,7 +57,7 @@ fun provideAboutBadges() = listOf(
         drawable = R.drawable.code,
         imageVector = null,
         contentDescription = R.string.start_source_code,
-        url = "https://github.com/Raf0707/RafBookReader"
+        url = "https://github.com/Raf0707/RafBook"
     ),
 
     /*Badge(
@@ -92,14 +92,13 @@ fun provideAboutBadges() = listOf(
         url = ""
     ),*/
 
-    //https://play.google.com/store/apps/details?id=raf.console.chitalka
 
     Badge(
         id = "rateApp",
         drawable = R.drawable.rate_in_app,
         imageVector = null,
         contentDescription = R.string.rate_app,
-        url = "https://play.google.com/store/apps/details?id=raf.console.chitalka"
+        url = "https://www.rustore.ru/catalog/app/raf.console.chitalka"
     ),
 
     Badge(

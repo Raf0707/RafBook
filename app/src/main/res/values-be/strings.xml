@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Basic Strings -->
-    <string name="app_version" translatable="false">2.6.1</string>
+    <string name="app_version" translatable="false">2.6.2</string>
     <string name="app_name" translatable="false">RafBook</string>
     <string name="default_string">Па змаўчанні</string>
     <string name="random_string">Выпадковы</string>

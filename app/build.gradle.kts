@@ -21,7 +21,7 @@ android {
         applicationId = "raf.console.chitalka"
         minSdk = 26
         targetSdk = 35
-        versionCode = 7
+        versionCode = 8
         versionName = "2.6.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -128,10 +128,13 @@ dependencies {
     ksp("androidx.hilt:hilt-compiler:1.2.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation("com.google.android.material:material:1.12.0")
-//    implementation("com.google.firebase:firebase-analytics:22.1.2")
-//    implementation("com.google.firebase:firebase-crashlytics:19.3.0")
-//    implementation("com.google.firebase:firebase-messaging:24.1.0")
-//    implementation("com.google.firebase:firebase-inappmessaging-display:21.0.1")
+
+    //firebase analytics
+    /*implementation("com.google.firebase:firebase-analytics:22.1.2")
+    implementation("com.google.firebase:firebase-crashlytics:19.3.0")
+    implementation("com.google.firebase:firebase-messaging:24.1.0")
+    implementation("com.google.firebase:firebase-inappmessaging-display:21.0.1")*/
+
     // Room
     implementation("androidx.room:room-runtime:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
@@ -181,11 +184,4 @@ dependencies {
     // Markdown
     implementation("org.commonmark:commonmark:0.24.0")
 
-    implementation("com.my.target:mytarget-sdk:5.20.0")
-
-    implementation("ru.rustore.sdk:appupdate:7.0.0")
-
-    implementation(platform("ru.rustore.sdk:bom:7.0.0"))
-    implementation("ru.rustore.sdk:appupdate")
-    implementation("ru.rustore.sdk:review")
 }

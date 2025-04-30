@@ -31,8 +31,6 @@ import raf.console.chitalka.R
 import raf.console.chitalka.presentation.core.constants.provideAboutBadges
 import raf.console.chitalka.presentation.core.util.showToast
 import raf.console.chitalka.ui.about.AboutEvent
-import raf.console.chitalka.util.update.checkForUpdates
-import ru.rustore.sdk.review.RuStoreReviewManagerFactory
 
 @Composable
 fun AboutBadges(
@@ -61,10 +59,10 @@ fun AboutBadges(
                         }*/
                         "shareApp" -> {
                             val appLink =
-                                "https://play.google.com/store/apps/details?id=raf.console.chitalka"
+                                "https://www.rustore.ru/catalog/app/raf.console.chitalka"
 
                             val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                            val clip = ClipData.newPlainText("Download RafBook Reader", "Download RafBook Reader \n" +
+                            val clip = ClipData.newPlainText("Скачать RafBook Reader", "Скачать RafBook Reader \n" +
                                     "\n" +
                                     " $appLink")
                             clipboard.setPrimaryClip(clip)
@@ -78,7 +76,7 @@ fun AboutBadges(
 
                             try {
                                 context.startActivity(
-                                    Intent.createChooser(shareIntent, "Share app with")
+                                    Intent.createChooser(shareIntent, "Поделиться приложением")
                                 )
                             } catch (e: Exception) {
                                 e.printStackTrace()
@@ -94,7 +92,7 @@ fun AboutBadges(
                                 data = Uri.parse("mailto:") // Только email-клиенты
                                 putExtra(Intent.EXTRA_EMAIL, arrayOf("raf_android-dev@mail.ru")) // Адрес
                                 putExtra(Intent.EXTRA_SUBJECT, "Feedback") // Тема письма
-                                putExtra(Intent.EXTRA_TEXT, "Hello, I'm <your name>,\n\n") // Текст по умолчанию
+                                putExtra(Intent.EXTRA_TEXT, "Здравтствуйте, меня зовут <Ваше имя>,\n\n") // Текст по умолчанию
                             }
 
                             try {
@@ -108,19 +106,6 @@ fun AboutBadges(
                                 ).show()
                             }
                         }
-
-                        /*"rate_app_here" -> {
-
-                        }*/
-
-                        /*"info_version" -> {
-                            val activity = context as? Activity
-                            if (activity != null) {
-                                checkForUpdates(context, activity)
-                            } else {
-                                Log.e(TAG, "Ошибка: context не является Activity")
-                            }
-                        }*/
 
                         else -> {
                             badge.url?.let {
@@ -136,18 +121,5 @@ fun AboutBadges(
                 }
             }
         }
-    }
-}
-
-
-fun openGPPage(context: Context) {
-    val uri = Uri.parse("https://play.google.com/store/apps/details?id=raf.console.chitalka")
-    val intent = Intent(Intent.ACTION_VIEW, uri)
-    intent.setPackage("ru.rustore")
-    try {
-        context.startActivity(intent)
-    } catch (e: Exception) {
-        // Если RuStore не установлен, открываем страницу в браузере
-        context.startActivity(Intent(Intent.ACTION_VIEW, uri))
     }
 }
